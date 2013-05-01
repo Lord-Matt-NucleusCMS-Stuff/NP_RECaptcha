@@ -108,7 +108,7 @@ class NP_RECaptcha extends NucleusPlugin {
 	function getName() {       return 'RE:Captcha';	}
 	function getAuthor()  {    return 'Lord Matt based on work by the Nucleus CMS Team';	}
 	function getURL(){         return 'http://wiki.lordmatt.co.uk/index.php/RECaptcha';	}
-	function getVersion() {    return '1.0'; }
+	function getVersion() {    return '1.1'; }
 	function getMinNucleusVersion() { return 320; }
 	function getMinNucleusPatchLevel() { return 0; }
 	function getEventList() {  return array('FormExtra', 'ValidateForm', 'PreComment'); }
@@ -123,6 +123,7 @@ class NP_RECaptcha extends NucleusPlugin {
 		switch ($what)
 		{
 			case 'SqlTablePrefix':
+				return 1;
 			case 'HelpPage':
 				return 0;
 			case 'handleSpam':
